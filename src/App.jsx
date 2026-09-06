@@ -27,7 +27,7 @@ function AddOneButton({ onClick }) {
 export default function App() {
   const [value, setValue] = useState(0);
 
-  function AddOne() {
+  function addOne() {
     setValue(value + 1);
   }
 
@@ -35,7 +35,7 @@ export default function App() {
     <>
       <Header title="Contador React" />
       <Counter value={value} />
-      <AddOneButton onClick={AddOne} />
+      <AddOneButton onClick={addOne} />
     </>
   );
 }
