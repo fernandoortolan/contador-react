@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function Header({ title }) {
   return (
     <h1>{title}</h1>
@@ -16,18 +18,24 @@ function Counter({ value }) {
   )
 }
 
-function AddOneButton() {
+function AddOneButton({ onClick }) {
   return (
-    <button>+1</button>
+    <button onClick={onClick}>+1</button>
   );
 }
 
 export default function App() {
+  const [value, setValue] = useState(0);
+
+  function AddOne() {
+    setValue(value + 1);
+  }
+
   return (
     <>
       <Header title="Contador React" />
-      <Counter />
-      <AddOneButton />
+      <Counter value={value} />
+      <AddOneButton onClick={AddOne} />
     </>
   );
 }
