@@ -4,8 +4,23 @@ function Header({ title }) {
   );
 }
 
+function Counter({ value }) {
+  let number = value;
+
+  if (number == "" || typeof number != "number") {
+    number = 0;
+  }
+
+  return (
+    <p>{number}</p>
+  )
+}
+
 export default function App() {
   return (
-    <Header title="Contador React" />
+    <>
+      <Header title="Contador React" />
+      <Counter />
+    </>
   );
 }
