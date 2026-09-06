@@ -1,5 +1,11 @@
+function Header({ title }) {
+  return (
+    <h1>{title}</h1>
+  );
+}
+
 export default function App() {
   return (
-    <h1>Contador React</h1>
+    <Header title="Contador React" />
   );
 }
