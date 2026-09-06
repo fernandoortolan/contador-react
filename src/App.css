@@ -1,0 +1,33 @@
+.contador {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contador p {
+  font-size: 24px;
+}
+
+.contador button {
+  color: #f6f7f9;
+  width: 100px;
+  border: 1px solid #8991eb;
+  border-radius: 8px;
+  background-color: transparent;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contador button:hover {
+  background-color: #8991eb;
+  color: #23272f;
+}
+
+.contador button:active {
+  transform: scale(0.95);
+}

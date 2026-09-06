@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './App.css';
 
 function Header({ title }) {
   return (
@@ -52,12 +53,12 @@ export default function App() {
   }
 
   return (
-    <>
+    <div className="contador">
       <Header title="Contador React" />
       <Counter value={value} />
       <AddOneButton onClick={addOne} />
       <SubOneButton onClick={subOne} />
       <ResetButton onClick={resetCounter} />
-    </>
+    </div>
   );
 }
