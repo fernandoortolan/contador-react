@@ -16,11 +16,18 @@ function Counter({ value }) {
   )
 }
 
+function AddOneButton() {
+  return (
+    <button>+1</button>
+  );
+}
+
 export default function App() {
   return (
     <>
       <Header title="Contador React" />
       <Counter />
+      <AddOneButton />
     </>
   );
 }
