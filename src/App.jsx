@@ -38,7 +38,7 @@ export default function App() {
   }
 
   function subOne() {
-    setValue(value - 1);
+    setValue(value - 1 < 0 ? 0 : value - 1);
   }
 
   return (
