@@ -24,6 +24,12 @@ function AddOneButton({ onClick }) {
   );
 }
 
+function SubOneButton({ onClick }) {
+  return (
+    <button onClick={onClick}>-1</button>
+  )
+}
+
 export default function App() {
   const [value, setValue] = useState(0);
 
@@ -31,11 +37,16 @@ export default function App() {
     setValue(value + 1);
   }
 
+  function subOne() {
+    setValue(value - 1);
+  }
+
   return (
     <>
       <Header title="Contador React" />
       <Counter value={value} />
       <AddOneButton onClick={addOne} />
+      <SubOneButton onClick={subOne} />
     </>
   );
 }
