@@ -30,6 +30,12 @@ function SubOneButton({ onClick }) {
   )
 }
 
+function ResetButton({ onClick }) {
+  return (
+    <button onClick={onClick}>Resetar</button>
+  )
+}
+
 export default function App() {
   const [value, setValue] = useState(0);
 
@@ -41,12 +47,17 @@ export default function App() {
     setValue(value - 1 < 0 ? 0 : value - 1);
   }
 
+  function resetCounter() {
+    setValue(0);
+  }
+
   return (
     <>
       <Header title="Contador React" />
       <Counter value={value} />
       <AddOneButton onClick={addOne} />
       <SubOneButton onClick={subOne} />
+      <ResetButton onClick={resetCounter} />
     </>
   );
 }
