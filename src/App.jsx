@@ -3,7 +3,9 @@ import './App.css';
 
 function Header({ title }) {
   return (
-    <h1>{title}</h1>
+    <h1>
+      {title}
+    </h1>
   );
 }
 
@@ -15,25 +17,33 @@ function Counter({ value }) {
   }
 
   return (
-    <p>{number}</p>
+    <p>
+      {number}
+    </p>
   )
 }
 
 function AddOneButton({ onClick }) {
   return (
-    <button onClick={onClick}>+1</button>
+    <button onClick={onClick}>
+      +1
+    </button>
   );
 }
 
-function SubOneButton({ onClick }) {
+function SubOneButton({ onClick, disabled }) {
   return (
-    <button onClick={onClick}>-1</button>
+    <button onClick={onClick} disabled={disabled}>
+      -1
+    </button>
   )
 }
 
-function ResetButton({ onClick }) {
+function ResetButton({ onClick, disabled }) {
   return (
-    <button onClick={onClick}>Resetar</button>
+    <button onClick={onClick} disabled={disabled}>
+      Resetar
+    </button>
   )
 }
 
@@ -52,13 +62,26 @@ export default function App() {
     setValue(0);
   }
 
+  function isCounterZero() {
+    return value === 0;
+  }
+
   return (
     <div className="contador">
       <Header title="Contador React" />
       <Counter value={value} />
+
       <AddOneButton onClick={addOne} />
-      <SubOneButton onClick={subOne} />
-      <ResetButton onClick={resetCounter} />
+
+      <SubOneButton
+        onClick={subOne}
+        disabled={isCounterZero()}
+      />
+
+      <ResetButton
+        onClick={resetCounter}
+        disabled={isCounterZero()}
+      />
     </div>
   );
 }
