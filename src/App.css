@@ -6,8 +6,13 @@
   justify-content: center;
 }
 
+.contador h1 {
+  margin-block: 24px;
+}
+
 .contador p {
   font-size: 24px;
+  margin-block: 16px 24px;
 }
 
 .contador button {
