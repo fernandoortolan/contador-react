@@ -36,3 +36,17 @@
 .contador button:active {
   transform: scale(0.95);
 }
+
+.contador button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.contador button:hover:disabled {
+  background-color: transparent;
+  color: #f6f7f9;
+}
+
+.contador button:active:disabled {
+  transform: none;
+}
